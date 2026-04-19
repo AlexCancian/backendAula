@@ -6,12 +6,12 @@ dotenv.config();
 
 const s3Client = new S3Client({
   region: process.env.S3_REGION || "us-east-1", // Railway may use another region or endpoint
-  endpoint: process.env.S3_ENDPOINT, // Optional parameter for Railway or alternative providers
+  endpoint: process.env.S3_ENDPOINT, // Required for MinIO (ex: http://localhost:9000)
   credentials: {
     accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
     secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
   },
-  forcePathStyle: false, // Railway requires Virtual-Hosted Style URLs
+  forcePathStyle: true, // Required for MinIO
 });
 
 export const getSignedUrlForS3 = async (fileName: string, expiresInSeconds: number = 3600): Promise<string> => {
