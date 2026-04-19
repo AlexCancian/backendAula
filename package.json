@@ -1,0 +1,55 @@
+{
+   "name": "whats-cobranca",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "type": "commonjs",
+   "devDependencies": {
+      "@types/bcrypt": "^5.0.2",
+      "@types/cookie-parser": "^1.4.10",
+      "@types/cors": "^2.8.17",
+      "@types/date-fns": "^2.6.3",
+      "@types/express": "^4.17.21",
+      "@types/jsonwebtoken": "^9.0.6",
+      "@types/node": "^20.12.0",
+      "ts-node": "10.9.1",
+      "ts-node-dev": "^2.0.0",
+      "typescript": "^5.4.0"
+   },
+   "dependencies": {
+      "@aws-sdk/client-s3": "^3.1012.0",
+      "@aws-sdk/s3-request-presigner": "^3.1013.0",
+      "@hapi/boom": "^10.0.1",
+      "@types/multer": "^2.1.0",
+      "@types/node-cron": "^3.0.11",
+      "@whiskeysockets/baileys": "^7.0.0-rc.9",
+      "bcrypt": "^6.0.0",
+      "cookie-parser": "^1.4.7",
+      "cors": "^2.8.5",
+      "date-fns": "^3.6.0",
+      "dotenv": "^16.4.5",
+      "express": "^4.19.2",
+      "express-async-errors": "^3.1.1",
+      "joi": "^17.13.3",
+      "jsonwebtoken": "^9.0.2",
+      "multer": "^2.1.1",
+      "mysql2": "^3.11.0",
+      "nestjs-typeorm-paginate": "^4.1.0",
+      "node-cron": "^4.2.1",
+      "pino": "^10.1.0",
+      "reflect-metadata": "^0.1.13",
+      "resend": "^6.7.0",
+      "rimraf": "^6.0.1",
+      "socket.io": "^4.8.3",
+      "typeorm": "^0.3.28",
+      "xlsx": "^0.18.5"
+   },
+   "scripts": {
+      "build": "tsc",
+      "start": "node build/server.js",
+      "dev:server": "ts-node-dev src/server.ts",
+      "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+   },
+   "engines": {
+      "node": ">=20.0.0"
+   }
+}
