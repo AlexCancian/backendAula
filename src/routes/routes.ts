@@ -12,7 +12,7 @@ import whatsRouter from "../controllers/WhatsController";
 const routers = Router();
 
 routers.use("/admin", adminRouter);
-routers.use("/user", authenticationMiddleware, userRouter);
+routers.use("/user", userRouter);
 routers.use("/dias", authenticationMiddleware, diaSemanaRouter);
 routers.use("/prompt", authenticationMiddleware, promptIARouter);
 routers.use("/mensagemEnviada", authenticationMiddleware, mensagemRouter);
